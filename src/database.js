@@ -27,7 +27,7 @@ const features = [
     icon: '#icon-presentation',
     heading: 'Highest rated realtors',
     text:
-      'Debitis itaque voluptatibus hic minus, natus recusandae pariatur tempora architecto temporibus, laborum cum optio ipsum rem reiciendis! Illum ut autem rerum harum.',
+      'Enim rerum error optio ab mollitia, officia possimus corrupti eius unde asperiores, eveniet labore harum sapiente hic.',
   },
   {
     icon: '#icon-lock',

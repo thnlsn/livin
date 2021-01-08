@@ -63,7 +63,7 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   display: grid;
   grid-template-columns: [icon-start] min-content [icon-end text-start] 1fr [text-end];
   grid-gap: 2.5rem;
-  position: relative; }
+  align-content: start; }
   .feature__icon {
     fill: #c69963;
     width: 4.5rem;

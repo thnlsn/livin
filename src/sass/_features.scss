@@ -21,7 +21,8 @@
   grid-template-columns: [icon-start] min-content [icon-end text-start] 1fr [text-end];
   grid-gap: 2.5rem;
 
-  position: relative;
+  // stretch by default, which makes uneven spacing as the items try to fill all the space
+  align-content: start;
 
   &__icon {
     fill: $color-primary;
