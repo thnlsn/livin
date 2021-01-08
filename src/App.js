@@ -11,13 +11,16 @@ import Homes from './components/Homes';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
+// Import data
+import { features } from './database';
+
 function App() {
   return (
     <div className='container'>
       <Sidebar />
       <Header />
       <Realtors />
-      <Features />
+      <Features features={features} />
       <Story />
       <Homes />
       <Gallery />
