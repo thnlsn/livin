@@ -12,7 +12,18 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 function App() {
-  return <div className='container'></div>;
+  return (
+    <div className='container'>
+      <Sidebar />
+      <Header />
+      <Realtors />
+      <Features />
+      <Story />
+      <Homes />
+      <Gallery />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
