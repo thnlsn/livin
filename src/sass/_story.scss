@@ -1,6 +1,6 @@
 .story {
   &__pictures {
-    background-color: rgba($color: $color-primary-dark, $alpha: 0.5);
+    background-color: rgba($color: $color-primary, $alpha: 0.5);
     grid-column: full-start / col-end 4;
     background-blend-mode: screen;
     background-size: cover;

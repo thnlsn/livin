@@ -116,7 +116,7 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     grid-column: text-start / text-end; }
 
 .story__pictures {
-  background-color: rgba(178, 132, 81, 0.5);
+  background-color: rgba(198, 153, 99, 0.5);
   grid-column: full-start / col-end 4;
   background-blend-mode: screen;
   background-size: cover;
