@@ -7,8 +7,8 @@ const Story = ({ story }) => {
     <Fragment>
       <div className='story__pictures'>Story pictures</div>
       <div className='story__content'>
-        <h3 className='heading-3'>{content.heading}</h3>
-        <h2 className='heading-2 heading-2--sark'>
+        <h3 className='heading-3 u-mb-sm'>{content.heading}</h3>
+        <h2 className='heading-2 heading-2--dark u-mb-md'>
           &ldquo;{content.quote}&rdquo;
         </h2>
         <p className='story__text'>{content.text}</p>
