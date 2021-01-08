@@ -12,7 +12,7 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 // Import data
-import { features } from './database';
+import { features, story, homes } from './database';
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
       <Header />
       <Realtors />
       <Features features={features} />
-      <Story />
-      <Homes />
+      <Story story={story} />
+      <Homes homes={homes} />
       <Gallery />
       <Footer />
     </div>

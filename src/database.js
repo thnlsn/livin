@@ -52,4 +52,49 @@ const story = {
   },
 };
 
-export { features };
+const homes = [
+  {
+    name: 'Beautiful Family House',
+    location: 'USA',
+    rooms: 5,
+    metersSquared: '325',
+    price: '1,200,000',
+  },
+  {
+    name: 'Modern Glass Villa',
+    location: 'Canada',
+    rooms: 6,
+    metersSquared: '450',
+    price: '2,750,000',
+  },
+  {
+    name: 'Cozy Country House',
+    location: 'UK',
+    rooms: 4,
+    metersSquared: '250',
+    price: '850,000',
+  },
+  {
+    name: 'Large Rustical Villa',
+    location: 'Portugal',
+    rooms: 6,
+    metersSquared: '480',
+    price: '1,950,000',
+  },
+  {
+    name: 'Majestic Palace House',
+    location: 'Germany',
+    rooms: 18,
+    metersSquared: '4230',
+    price: '9,500,000',
+  },
+  {
+    name: 'Modern Familiy Apartment',
+    location: 'Italy',
+    rooms: 3,
+    metersSquared: '180',
+    price: '600,000',
+  },
+];
+
+export { features, story, homes };
