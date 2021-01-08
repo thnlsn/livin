@@ -4,8 +4,14 @@
 
   margin: 15rem 0;
 
+  // The 8 column layout has a maximum possible width of 1120px
+  // 3 columns of features has a minimum possible width of 870px (750px (3 boxes) + 120px (2 gutters))
+  // In order for a 4th column to auto-fit, it would take 310px more (250px box + 60px gutter)
+  // 870px + 310px = 1180px which is above 1120px
+  // This means that there can only ever be 3 columns at a maximum, even though it is never explicitly stated.
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // auto-fit to create as many tracks as needed to fit
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
 
   /*

@@ -37,7 +37,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  // 8 columns with width between their min-content and 14rem
+  // 8 columns with width between their min-content and 14rem mean that a maximum possible width is 1120px (14rem * 8)
   grid-template-columns:
     [sidebar-start] 8rem [sidebar-end full-start] $full-bleed-width [center-start] repeat(
       8,

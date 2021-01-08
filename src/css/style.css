@@ -51,7 +51,7 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   grid-row: 2 / 3;
   margin: 15rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   /*
   @supports (grid-template-columns: subgrid) {
