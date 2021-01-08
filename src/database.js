@@ -37,4 +37,19 @@ const features = [
   },
 ];
 
+const story = {
+  pictures: {
+    backgroundImage: '',
+    imageOne: '',
+    imageTwo: '',
+  },
+  content: {
+    heading: 'Happy customers',
+    quote: 'The best decision of our lives',
+    text:
+      'Consequuntur natus asperiores magni itaque doloribus iure distinctio, praesentium voluptates reprehenderit inventore.',
+    buttonText: 'Find your own home',
+  },
+};
+
 export { features };
