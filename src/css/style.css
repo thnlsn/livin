@@ -116,8 +116,25 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     grid-column: text-start / text-end; }
 
 .story__pictures {
-  background-color: #c69963;
-  grid-column: full-start / col-end 4; }
+  background-color: rgba(178, 132, 81, 0.5);
+  grid-column: full-start / col-end 4;
+  background-blend-mode: screen;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center; }
+
+.story__img--1 {
+  width: 100%;
+  grid-column: 2 / 6;
+  grid-row: 2 / 6; }
+
+.story__img--2 {
+  width: 115%;
+  grid-column: 4 / 7;
+  grid-row: 4 / 6;
+  z-index: 10; }
 
 .story__content {
   background-color: #f9f7f6;
