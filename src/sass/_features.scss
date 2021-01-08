@@ -16,13 +16,27 @@
 }
 
 .feature {
+  display: grid;
+  // min-content because if we ever change the icon size, it will adjust (easily updating)
+  grid-template-columns: [icon-start] min-content [icon-end text-start] 1fr [text-end];
+  grid-gap: 2.5rem;
+
+  position: relative;
+
   &__icon {
     fill: $color-primary;
     width: 4.5rem;
     height: 4.5rem;
+
+    grid-column: icon-start / icon-end;
+    grid-row: 1 / span 2;
+
+    transform: translateY(-1rem); // <margin-top: -1rem;> would work too
   }
 
   &__text {
     font-size: 1.7rem;
+
+    grid-column: text-start / text-end;
   }
 }

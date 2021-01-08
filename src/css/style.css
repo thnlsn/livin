@@ -59,13 +59,21 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   }
   */ }
 
-.feature__icon {
-  fill: #c69963;
-  width: 4.5rem;
-  height: 4.5rem; }
-
-.feature__text {
-  font-size: 1.7rem; }
+.feature {
+  display: grid;
+  grid-template-columns: [icon-start] min-content [icon-end text-start] 1fr [text-end];
+  grid-gap: 2.5rem;
+  position: relative; }
+  .feature__icon {
+    fill: #c69963;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-column: icon-start / icon-end;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.7rem;
+    grid-column: text-start / text-end; }
 
 .story__pictures {
   background-color: #c69963;
