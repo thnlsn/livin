@@ -18,6 +18,21 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+/* 
+$font-primary: 'Nunito', sans-serif; // A more neutral font to serve as the default text font
+$font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for the luxury modern feel
+*/
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--dark {
+    color: #54483a; }
+
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
@@ -32,7 +47,6 @@ body {
   grid-column: col-start 7 / -1; }
 
 .features {
-  background-color: #aaa;
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
   margin: 15rem 0;
@@ -44,6 +58,14 @@ body {
     grid-template-columns: subgrid;
   }
   */ }
+
+.feature__icon {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem; }
+
+.feature__text {
+  font-size: 1.7rem; }
 
 .story__pictures {
   background-color: #c69963;

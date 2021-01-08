@@ -11,7 +11,7 @@ const Features = ({ features }) => {
           <svg className='feature__icon'>
             <use xlinkHref={`${sprite}${feature.icon}`}></use>
           </svg>
-          <h4 className='heading-4'>{feature.heading}</h4>
+          <h4 className='heading-4 heading-4--dark'>{feature.heading}</h4>
           <p className='feature__text'>{feature.text}</p>
         </div>
       ))}
