@@ -39,9 +39,9 @@ const features = [
 
 const story = {
   pictures: {
-    backgroundImage: '',
-    imageOne: '',
-    imageTwo: '',
+    backgroundImage: require('./images/back.jpg'),
+    imageOne: require('./images/story-1.jpeg'),
+    imageTwo: require('./images/story-2.jpeg'),
   },
   content: {
     heading: 'Happy customers',
