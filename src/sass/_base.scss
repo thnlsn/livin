@@ -1,15 +1,33 @@
 // COLOR VARIABLES
 $color-primary: #c69963;
-$color-primary-dark: #B28451;
+$color-primary-dark: #b28451;
 
 $color-secondary: #101d2c;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$font-primary: 'Nunito', sans-serif; // A more neutral font to serve as the default text font
+$font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for the luxury modern feel
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; // This is so that if we want a whole component to use a certain box-sizing system, we only have to declare it in the oldest parent of the component for the children to inherit
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // This sets the default font-size to 10px because most broswers default to 16px, and 62.5% of 16 is 10. This makes it easier to use rem units.
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+}
