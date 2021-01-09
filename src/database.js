@@ -118,4 +118,21 @@ const homes = {
   },
 };
 
-export { features, story, homes };
+const gallery = [
+  require('./images/gal-1.jpeg'),
+  require('./images/gal-2.jpeg'),
+  require('./images/gal-3.jpeg'),
+  require('./images/gal-4.jpeg'),
+  require('./images/gal-5.jpeg'),
+  require('./images/gal-6.jpeg'),
+  require('./images/gal-7.jpeg'),
+  require('./images/gal-8.jpeg'),
+  require('./images/gal-9.jpeg'),
+  require('./images/gal-10.jpeg'),
+  require('./images/gal-11.jpeg'),
+  require('./images/gal-12.jpeg'),
+  require('./images/gal-13.jpeg'),
+  require('./images/gal-14.jpeg'),
+];
+
+export { features, story, homes, gallery };

@@ -12,7 +12,7 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 // Import data
-import { features, story, homes } from './database';
+import { features, story, homes, gallery } from './database';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <Features features={features} />
       <Story story={story} />
       <Homes homes={homes} />
-      <Gallery />
+      <Gallery gallery={gallery} />
       <Footer />
     </div>
   );
