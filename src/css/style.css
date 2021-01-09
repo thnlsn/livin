@@ -221,7 +221,8 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   .gallery__img {
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    display: block; }
   .gallery > :nth-child(1) {
     grid-area: 1 / 1 / 3 / 3; }
   .gallery > :nth-child(2) {
