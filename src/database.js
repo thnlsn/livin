@@ -52,49 +52,70 @@ const story = {
   },
 };
 
-const homes = [
-  {
-    name: 'Beautiful Family House',
-    location: 'USA',
-    rooms: 5,
-    metersSquared: '325',
-    price: '1,200,000',
+const homes = {
+  properties: [
+    {
+      name: 'Beautiful Family House',
+      image: require('./images/house-1.jpeg'),
+      icon: '#icon-heart-full',
+      location: 'USA',
+      rooms: 5,
+      metersSquared: '325',
+      price: '1,200,000',
+    },
+    {
+      name: 'Modern Glass Villa',
+      image: require('./images/house-2.jpeg'),
+      icon: '#icon-heart-full',
+      location: 'Canada',
+      rooms: 6,
+      metersSquared: '450',
+      price: '2,750,000',
+    },
+    {
+      name: 'Cozy Country House',
+      image: require('./images/house-3.jpeg'),
+      icon: '#icon-heart-full',
+      location: 'UK',
+      rooms: 4,
+      metersSquared: '250',
+      price: '850,000',
+    },
+    {
+      name: 'Large Rustical Villa',
+      image: require('./images/house-4.jpeg'),
+      icon: '#icon-heart-full',
+      location: 'Portugal',
+      rooms: 6,
+      metersSquared: '480',
+      price: '1,950,000',
+    },
+    {
+      name: 'Majestic Palace House',
+      image: require('./images/house-5.jpeg'),
+      icon: '#icon-heart-full',
+      location: 'Germany',
+      rooms: 18,
+      metersSquared: '4230',
+      price: '9,500,000',
+    },
+    {
+      name: 'Modern Familiy Apartment',
+      image: require('./images/house-6.jpeg'),
+      icon: '#icon-heart-full',
+      location: 'Italy',
+      rooms: 3,
+      area: '180',
+      price: '600,000',
+    },
+  ],
+  icons: {
+    like: '#icon-heart-full',
+    location: '#icon-map-pin',
+    rooms: '#icon-profile-male',
+    area: '#icon-expand',
+    price: '#icon-key',
   },
-  {
-    name: 'Modern Glass Villa',
-    location: 'Canada',
-    rooms: 6,
-    metersSquared: '450',
-    price: '2,750,000',
-  },
-  {
-    name: 'Cozy Country House',
-    location: 'UK',
-    rooms: 4,
-    metersSquared: '250',
-    price: '850,000',
-  },
-  {
-    name: 'Large Rustical Villa',
-    location: 'Portugal',
-    rooms: 6,
-    metersSquared: '480',
-    price: '1,950,000',
-  },
-  {
-    name: 'Majestic Palace House',
-    location: 'Germany',
-    rooms: 18,
-    metersSquared: '4230',
-    price: '9,500,000',
-  },
-  {
-    name: 'Modern Familiy Apartment',
-    location: 'Italy',
-    rooms: 3,
-    metersSquared: '180',
-    price: '600,000',
-  },
-];
+};
 
 export { features, story, homes };
