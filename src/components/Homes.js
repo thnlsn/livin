@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 // SVG SPRITES
 import sprite from '../images/sprite.svg';
@@ -9,7 +9,7 @@ const Homes = ({ homes }) => {
   return (
     <section className='homes'>
       {properties.map((home, index) => (
-        <Fragment>
+        <div className='home'>
           <img
             src={home.image}
             alt={`House ${index}`}
@@ -30,21 +30,23 @@ const Homes = ({ homes }) => {
             <svg>
               <use xlinkHref={`${sprite}${icons.rooms}`}></use>
             </svg>
-            <p>{home.rooms}</p>
+            <p>{home.rooms} rooms</p>
           </div>
           <div className='home__area'>
             <svg>
-              <use xlinkHref={`${sprite}${icons.size}`}></use>
+              <use xlinkHref={`${sprite}${icons.area}`}></use>
             </svg>
-            <p>{home.area}</p>
+            <p>
+              {home.area} m<sup>2</sup>
+            </p>
           </div>
           <div className='home__price'>
             <svg>
               <use xlinkHref={`${sprite}${icons.price}`}></use>
             </svg>
-            <p>{home.price}</p>
+            <p>${home.price}</p>
           </div>
-        </Fragment>
+        </div>
       ))}
     </section>
   );

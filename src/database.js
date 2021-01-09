@@ -60,7 +60,7 @@ const homes = {
       icon: '#icon-heart-full',
       location: 'USA',
       rooms: 5,
-      metersSquared: '325',
+      area: '325',
       price: '1,200,000',
     },
     {
@@ -69,7 +69,7 @@ const homes = {
       icon: '#icon-heart-full',
       location: 'Canada',
       rooms: 6,
-      metersSquared: '450',
+      area: '450',
       price: '2,750,000',
     },
     {
@@ -78,7 +78,7 @@ const homes = {
       icon: '#icon-heart-full',
       location: 'UK',
       rooms: 4,
-      metersSquared: '250',
+      area: '250',
       price: '850,000',
     },
     {
@@ -87,7 +87,7 @@ const homes = {
       icon: '#icon-heart-full',
       location: 'Portugal',
       rooms: 6,
-      metersSquared: '480',
+      area: '480',
       price: '1,950,000',
     },
     {
@@ -96,7 +96,7 @@ const homes = {
       icon: '#icon-heart-full',
       location: 'Germany',
       rooms: 18,
-      metersSquared: '4230',
+      area: '4230',
       price: '9,500,000',
     },
     {

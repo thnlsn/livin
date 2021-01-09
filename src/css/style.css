@@ -164,7 +164,7 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   background-color: #f9f7f6; }
   .home__img {
     width: 100%; }
-  .home__like {
+  .home svg {
     fill: #c69963;
     height: 2rem;
     width: 2rem; }
