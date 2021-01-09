@@ -1,4 +1,14 @@
 .footer {
   background-color: $color-secondary;
   grid-column: full-start / full-end; // -1 would work
+  padding: 8rem;
+}
+
+.nav {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
