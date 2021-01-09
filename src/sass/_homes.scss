@@ -14,7 +14,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.5rem;
-  justify-items: center;
 
   &__img {
     width: 100%;
@@ -58,6 +57,7 @@
     grid-column: 1 / -1;
 
     align-self: end;
+    justify-self: center;
 
     z-index: 3; // Same as the heart icon
   }
@@ -71,12 +71,17 @@
   &__rooms,
   &__area,
   &__price {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    margin-left: 2rem;
+
     svg {
       fill: $color-primary;
       height: 2rem;
       width: 2rem;
-    }
-    p {
     }
   }
 
