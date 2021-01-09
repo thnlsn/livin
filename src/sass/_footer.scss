@@ -7,8 +7,32 @@
 .nav {
   list-style: none;
 
+  // flex because it is a one-dimensional layout
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  grid-gap: 1rem; // Works on flexboxes
+
+  // Usually should target link and visited for styling links
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: $font-display;
+    text-transform: uppercase;
+
+    padding: 1.5rem;
+    display: block;
+
+    transition: 0.2s all;
+    background-color: rgba($color: #fff, $alpha: 0.01);
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: rgba($color: #fff, $alpha: 0.05);
+    transform: translateY(-2px);
+  }
 }
