@@ -135,4 +135,16 @@ const gallery = [
   require('./images/gal-14.jpeg'),
 ];
 
-export { features, story, homes, gallery };
+const footer = {
+  links: [
+    { text: 'Find your dream home', url: '#' },
+    { text: 'Request proposal', url: '#' },
+    { text: 'Download home planner', url: '#' },
+    { text: 'Contact us', url: '#' },
+    { text: 'Sumbit your property', url: '#' },
+    { text: 'Come work with us!', url: '#' },
+  ],
+  copyright: '2020 by livin',
+};
+
+export { features, story, homes, gallery, footer };
