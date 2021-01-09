@@ -46,6 +46,7 @@ const Homes = ({ homes }) => {
             </svg>
             <p>${home.price}</p>
           </div>
+          <button className='btn home__btn'>Contact realtor</button>
         </div>
       ))}
     </section>
