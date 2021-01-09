@@ -7,6 +7,7 @@ const Story = ({ story }) => {
     <Fragment>
       <div
         className='story__pictures'
+        // Style for background-image set in here because we want clients to be able to easily change the background image, which cannot be updated from a single location if it were to be defined in the css stylesheet
         style={{
           backgroundImage: `url(${pictures.backgroundImage})`,
         }}
