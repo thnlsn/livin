@@ -14,6 +14,7 @@ const Footer = ({ footer }) => {
           </li>
         ))}
       </ul>
+      <p className='copyright'>&copy; {copyright}</p>
     </footer>
   );
 };

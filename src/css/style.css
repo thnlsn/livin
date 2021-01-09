@@ -76,7 +76,27 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  margin-top: 4rem;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem; }
+  .nav-btn:before, .nav-btn:after {
+    content: '';
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem; }
+  .nav-btn:before {
+    transform: translateY(-1.5rem); }
+  .nav-btn:after {
+    transform: translateY(1.5rem); }
 
 .header {
   background-color: #54483a;
@@ -277,3 +297,10 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   .nav__link:hover, .nav__link:active {
     background-color: rgba(255, 255, 255, 0.05);
     transform: translateY(-2px); }
+
+.copyright {
+  font-size: 1.4rem;
+  color: #aaa;
+  text-align: center;
+  width: 70%;
+  margin: 6rem auto 0 auto; }
