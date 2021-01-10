@@ -6,6 +6,16 @@ const header = {
   heading: {
     prefix: 'Your own home:',
     text: 'The ultimate personal freedom',
+    buttonText: 'View our properties',
+  },
+  seenOn: {
+    text: 'Seen on',
+    logos: [
+      require('./images/logo-bbc.png'),
+      require('./images/logo-forbes.png'),
+      require('./images/logo-techcrunch.png'),
+      require('./images/logo-bi.png'),
+    ],
   },
 };
 
