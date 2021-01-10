@@ -190,4 +190,4 @@ const footer = {
   copyright: '2020 by livin',
 };
 
-export { header, features, story, homes, gallery, footer };
+export { header, realtors, features, story, homes, gallery, footer };

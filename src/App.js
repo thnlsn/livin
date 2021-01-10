@@ -12,14 +12,22 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 // Import data
-import { header, features, story, homes, gallery, footer } from './database';
+import {
+  header,
+  realtors,
+  features,
+  story,
+  homes,
+  gallery,
+  footer,
+} from './database';
 
 function App() {
   return (
     <div className='container'>
       <Sidebar />
       <Header header={header} />
-      <Realtors />
+      <Realtors realtors={realtors} />
       <Features features={features} />
       <Story story={story} />
       <Homes homes={homes} />
