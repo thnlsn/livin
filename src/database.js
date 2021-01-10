@@ -1,3 +1,14 @@
+const header = {
+  brand: {
+    logo: require('./images/logo-icon.png'),
+    title: 'livin',
+  },
+  heading: {
+    prefix: 'Your own home:',
+    text: 'The ultimate personal freedom',
+  },
+};
+
 const features = [
   {
     icon: '#icon-global',
