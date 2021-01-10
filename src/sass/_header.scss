@@ -5,11 +5,23 @@
   background-blend-mode: multiply;
   background-size: cover;
 
+  display: grid;
+  // Using fr in rows works here because the height of the parent is defined
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+
+  justify-content: center; // Center the lot of grid elements
+
+  padding: 2rem 0rem;
+
   &__brand {
     height: 3rem;
     display: flex;
     align-items: center;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
+
+    justify-self: center; // Center the logo on the top
   }
   &__logo {
     height: 3rem;
@@ -26,8 +38,17 @@
   &__seen-on-text {
   }
   &__seen-on-logos {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.45;
+
     img {
       height: 2.5rem;
     }
+  }
+
+  &__btn {
+    align-self: center;
+    justify-self: start;
   }
 }

@@ -131,20 +131,34 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   grid-column: full-start / col-end 6;
   background-color: rgba(16, 29, 44, 0.93);
   background-blend-mode: multiply;
-  background-size: cover; }
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 0rem; }
   .header__brand {
     height: 3rem;
     display: flex;
     align-items: center;
-    grid-gap: 1rem; }
+    grid-gap: 0.5rem;
+    justify-self: center; }
   .header__logo {
     height: 3rem; }
   .header__link:link, .header__link:visited {
     color: #c69963;
     font-size: 2.5rem;
     text-decoration: none; }
-  .header__seen-on-logos img {
-    height: 2.5rem; }
+  .header__seen-on-logos {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.45; }
+    .header__seen-on-logos img {
+      height: 2.5rem; }
+  .header__btn {
+    align-self: center;
+    justify-self: start; }
 
 .realtors {
   background-color: #101d2c;

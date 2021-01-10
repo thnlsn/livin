@@ -18,7 +18,7 @@ const Header = ({ header }) => {
       </div>
       <h3 className='heading-3'>{heading.prefix}</h3>
       <h1 className='heading-1'>{heading.text}</h1>
-      <button className='btn'>{heading.buttonText}</button>
+      <button className='btn header__btn'>{heading.buttonText}</button>
       <div className='header__seen-on-text'>{seenOn.text}</div>
       <div className='header__seen-on-logos'>
         {seenOn.logos.map((logo, index) => (
