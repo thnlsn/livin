@@ -1,10 +1,15 @@
 import React from 'react';
 
 const Header = ({ header }) => {
-  const { brand, heading, seenOn } = header;
+  const { background, brand, heading, seenOn } = header;
 
   return (
-    <header className='header'>
+    <header
+      className='header'
+      style={{
+        backgroundImage: `url(${background})`,
+      }}
+    >
       <div className='header__brand'>
         <img src={brand.logo} alt='' className='header__logo' />
         <a href='#' className='header__link'>
