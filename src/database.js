@@ -1,4 +1,5 @@
 const header = {
+  background: require('./images/hero.jpeg'),
   brand: {
     logo: require('./images/logo-icon.png'),
     title: 'livin',
@@ -168,4 +169,4 @@ const footer = {
   copyright: '2020 by livin',
 };
 
-export { features, story, homes, gallery, footer };
+export { header, features, story, homes, gallery, footer };

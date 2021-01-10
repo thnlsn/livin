@@ -1,4 +1,35 @@
 .header {
   background-color: $color-grey-dark-1;
   grid-column: full-start / col-end 6;
+
+  background-image: linear-gradient(
+    rgba($color-secondary, 0.93),
+    rgba($color-secondary, 0.93)
+  );
+
+  &__brand {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+  }
+  &__logo {
+    height: 3rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-primary;
+      font-size: 2.5rem;
+      text-decoration: none;
+    }
+  }
+
+  &__seen-on-text {
+  }
+  &__seen-on-logos {
+    img {
+      height: 2.5rem;
+    }
+  }
 }
