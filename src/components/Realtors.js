@@ -6,7 +6,7 @@ const Realtors = ({ realtors }) => {
   return (
     <div className='realtors'>
       <h3 className='heading-3'>{text}</h3>
-      <div className='realtors__top-3'>
+      <div className='realtors__list'>
         {staff.map((realtor, index) => (
           <div className='realtor'>
             <img
@@ -14,8 +14,10 @@ const Realtors = ({ realtors }) => {
               alt={`Realtor ${index}`}
               className='realtor__img'
             />
-            <div className='realtor__name'>{realtor.name}</div>
-            <div className='realtor__sales'>{realtor.sales}</div>
+            <div className='realtor__details'>
+              <h4 className='heading-4 heading-4--light'>{realtor.name}</h4>
+              <div className='realtor__sales'>{realtor.sales} houses sold</div>
+            </div>
           </div>
         ))}
       </div>

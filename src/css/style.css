@@ -175,7 +175,31 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-start 7 / -1; }
+  grid-column: col-start 7 / -1;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center; }
+  .realtors__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 3rem;
+    justify-content: center; }
+
+.realtor {
+  display: grid;
+  grid-template-columns: 5.6rem max-content;
+  grid-column-gap: 2rem;
+  align-items: center; }
+  .realtor__img {
+    width: 100%;
+    grid-row: 1 / -1;
+    border-radius: 50%; }
+  .realtor__sales {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 0.8rem; }
 
 .features {
   grid-column: center-start / center-end;
