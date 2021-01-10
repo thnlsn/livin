@@ -78,25 +78,49 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   display: flex;
-  justify-content: center; }
-
-.nav-btn {
-  border: none;
-  border-radius: 0;
-  margin-top: 4rem;
-  background-color: #fff;
-  height: 2px;
-  width: 4.5rem; }
-  .nav-btn:before, .nav-btn:after {
-    content: '';
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  width: 100%; }
+  .sidebar__checkbox {
+    display: none; }
+  .sidebar__btn {
+    position: relative;
+    margin-top: 4rem;
     display: block;
+    width: 4.5rem;
+    height: 3.2rem; }
+  .sidebar__burger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     height: 2px;
     width: 4.5rem; }
-  .nav-btn:before {
-    transform: translateY(-1.5rem); }
-  .nav-btn:after {
-    transform: translateY(1.5rem); }
+    .sidebar__burger, .sidebar__burger:before, .sidebar__burger:after {
+      transition: 0.4s all; }
+    .sidebar__burger:before, .sidebar__burger:after {
+      content: '';
+      display: block;
+      background-color: #fff;
+      height: inherit;
+      width: inherit;
+      position: absolute; }
+    .sidebar__burger:before {
+      top: -1.5rem; }
+    .sidebar__burger:after {
+      top: 1.5rem; }
+  .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger {
+    background-color: transparent; }
+  .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger:before,
+  .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger:after {
+    top: 0;
+    color: #fff; }
+  .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger:before {
+    transform: rotate(135deg); }
+  .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger:after {
+    transform: rotate(-135deg); }
 
 .header {
   background-color: #54483a;

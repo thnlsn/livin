@@ -3,33 +3,86 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; // Start at row line 1 (top) and span to the bottom (-1)
 
+  // Center the burger btn
   display: flex;
-  justify-content: center;
-}
+  align-items: center;
+  flex-direction: column;
 
-.nav-btn {
-  border: none;
-  border-radius: 0;
+  z-index: 9999;
+  width: 100%;
 
-  margin-top: 4rem;
+  &__checkbox {
+    display: none;
+  }
 
-  background-color: #fff;
-  height: 2px;
-  width: 4.5rem;
-
-  &:before,
-  &:after {
-    content: '';
+  // The burger button
+  &__btn {
+    position: relative;
+    margin-top: 4rem;
     display: block;
+    width: 4.5rem;
+    height: 3.2rem;
+  }
+
+  &__burger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // Burger bun styles
     background-color: #fff;
     height: 2px;
     width: 4.5rem;
+
+    // Apply a transition time to all lines in the burger icon
+    &,
+    &:before,
+    &:after {
+      transition: 0.4s all;
+    }
+
+    // Inherit and apply styling to the top and bottom buns
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      background-color: #fff; // Don't inherit because we want to change the main one for animations and these shouldnt copy
+      height: inherit; // So we can define the middle of the burger and the to buns inherit
+      width: inherit; // So we can define the middle of the burger and the to buns inherit
+
+      position: absolute; // Setting it here because they will both be placed absolutely below
+    }
+
+    // Top bun 15px above middle
+    &:before {
+      top: -1.5rem;
+    }
+    // Bottom bun 15px under middle
+    &:after {
+      top: 1.5rem;
+    }
   }
 
-  &:before {
-    transform: translateY(-1.5rem);
+  // When checked, select the main burger element (the meat in the buns)
+  &__checkbox:checked + &__btn &__burger {
+    background-color: transparent;
   }
-  &:after {
-    transform: translateY(1.5rem);
+
+  // When checked, select the top and bottom bun
+  &__checkbox:checked + &__btn &__burger:before,
+  &__checkbox:checked + &__btn &__burger:after {
+    top: 0; // Reset to absolutely on top of main burger so that the transform has it centered to form the X
+    color: #fff;
+  }
+
+  // When checked, select the top bun
+  &__checkbox:checked + &__btn &__burger:before {
+    transform: rotate(135deg);
+  }
+
+  // When checked, select the bottom bun
+  &__checkbox:checked + &__btn &__burger:after {
+    transform: rotate(-135deg);
   }
 }
