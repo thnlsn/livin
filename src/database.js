@@ -20,6 +20,27 @@ const header = {
   },
 };
 
+const realtors = {
+  text: 'Top 3 realtors',
+  staff: [
+    {
+      image: require('./images/realtor-1.jpeg'),
+      name: 'Nathan Juszczyk',
+      sales: '237',
+    },
+    {
+      image: require('./images/realtor-2.jpeg'),
+      name: 'Aubrey Flores',
+      sales: '202',
+    },
+    {
+      image: require('./images/realtor-3.jpeg'),
+      name: 'Damien Wilson',
+      sales: '194',
+    },
+  ],
+};
+
 const features = [
   {
     icon: '#icon-global',
