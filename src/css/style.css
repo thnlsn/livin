@@ -178,23 +178,22 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   grid-column: col-start 7 / -1;
   display: flex;
   flex-direction: column;
-  grid-gap: 2rem;
+  grid-row-gap: 2.5vh;
   justify-content: center;
   align-items: center; }
   .realtors__list {
     display: flex;
     flex-direction: column;
-    grid-gap: 3rem;
+    grid-gap: 5vh;
     justify-content: center; }
 
 .realtor {
   display: grid;
-  grid-template-columns: 5.6rem max-content;
+  grid-template-columns: 7rem max-content;
   grid-column-gap: 2rem;
   align-items: center; }
   .realtor__img {
     width: 100%;
-    grid-row: 1 / -1;
     border-radius: 50%; }
   .realtor__sales {
     color: #aaa;
