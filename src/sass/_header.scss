@@ -36,7 +36,25 @@
   }
 
   &__seen-on-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr; // Max because we don't want the text to wrap
+    align-items: center;
+    grid-column-gap: 1rem;
+
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1.5px;
+      display: block;
+      background-color: currentColor;
+
+      opacity: 0.45;
+    }
   }
+
   &__seen-on-logos {
     display: flex;
     justify-content: space-between;

@@ -150,6 +150,19 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     color: #c69963;
     font-size: 2.5rem;
     text-decoration: none; }
+  .header__seen-on-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-column-gap: 1rem;
+    font-size: 1.6rem;
+    color: #aaa; }
+    .header__seen-on-text::before, .header__seen-on-text::after {
+      content: '';
+      height: 1.5px;
+      display: block;
+      background-color: currentColor;
+      opacity: 0.45; }
   .header__seen-on-logos {
     display: flex;
     justify-content: space-between;
