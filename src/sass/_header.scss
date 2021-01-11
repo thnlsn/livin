@@ -17,8 +17,9 @@
 
   padding: 2rem 8rem 2rem 8rem;
 
+  // Split the header and the realtors to their own rows
   @media only screen and (max-width: $bp-medium) {
-    grid-column: 1 / -1;
+    grid-column: full-start / full-end;
     padding: 2rem 8rem 6rem 8rem;
   }
 

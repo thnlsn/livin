@@ -71,7 +71,7 @@ body {
   @media only screen and (max-width: $bp-large) {
     // Add new row and remove first column
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-    // 8 columns with width between their min-content and 14rem mean that a maximum possible width is 1120px (14rem * 8)
+    // Remove the sidebar-start and end because it will not be on the top of the page
     grid-template-columns:
       [full-start] $full-bleed-width [center-start] repeat(
         8,
@@ -83,20 +83,21 @@ body {
 
   // 800px WIDTH VIEWPORT
   @media only screen and (max-width: $bp-medium) {
-    // Add new row and remove first column
-    grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(
+    // Add new row to fit the realtors getting its own row
+    // calc is to make the header take the whole viewport height but accounting for the new sidebar that is on top now
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(
         3,
         min-content
       );
-    // 8 columns with width between their min-content and 14rem mean that a maximum possible width is 1120px (14rem * 8)
-    grid-template-columns:
-      [full-start] $full-bleed-width [center-start] repeat(
-        8,
-        [col-start] minmax(min-content, 14rem) [col-end]
-      )
-      [center-end]
-      $full-bleed-width [full-end]; // 14rme = 140px = 1140/8 (8 columns)
   }
+
+  /*   @media only screen and (max-width: $bp-small) {
+    // Add new row to fit the story splitting and getting a second row
+    grid-template-rows: 6rem 80vh min-content min-content min-content 40vw repeat(
+        3,
+        min-content
+      );
+  } */
 }
 
 // UTILITY CLASSES
