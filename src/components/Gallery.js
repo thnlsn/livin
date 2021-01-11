@@ -6,7 +6,7 @@ const Gallery = ({ gallery }) => {
       {gallery.map((image, index) => (
         <img
           src={image}
-          alt={`Gallery image ${index++}`}
+          alt={`Gallery house ${index++}`}
           className='gallery__img'
           key={index}
         />
