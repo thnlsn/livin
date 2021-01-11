@@ -85,10 +85,8 @@ body {
   @media only screen and (max-width: $bp-medium) {
     // Add new row to fit the realtors getting its own row
     // calc is to make the header take the whole viewport height but accounting for the new sidebar that is on top now
-    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(
-        3,
-        min-content
-      );
+    grid-template-rows: 6rem calc(100vh - 6rem);
+    // All the rows after the sidebar and header are gone because the grid algorithm will handle the rest, which works because they are all based on min-content which is the default
   }
 
   /*   @media only screen and (max-width: $bp-small) {

@@ -35,7 +35,7 @@ const realtors = {
     },
     {
       image: require('./images/realtor-3.jpeg'),
-      name: 'Damien Wilson',
+      name: 'Miles Patterson',
       sales: '194',
     },
   ],

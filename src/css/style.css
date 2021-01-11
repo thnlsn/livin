@@ -36,7 +36,7 @@ body {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content); } }
+      grid-template-rows: 6rem calc(100vh - 6rem); } }
 
 .u-unselectable {
   -webkit-touch-callout: none;
@@ -194,6 +194,9 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     .header {
       grid-column: full-start / full-end;
       padding: 2rem 8rem 6rem 8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      padding: 2rem 5rem 6rem 5rem; } }
   .header__brand {
     height: 3rem;
     display: flex;
@@ -222,10 +225,15 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   .header__seen-on-logos {
     display: flex;
     justify-content: space-between;
-    opacity: 0.45; }
+    opacity: 0.45;
+    grid-column-gap: 1rem;
+    padding: 0 1rem; }
     .header__seen-on-logos img {
-      max-height: 2.5rem;
+      height: 2.5rem;
       max-width: 100%; }
+      @media only screen and (max-width: 37.5em) {
+        .header__seen-on-logos img {
+          max-height: 1.5rem; } }
   .header__btn {
     align-self: start;
     justify-self: start; }
@@ -249,10 +257,11 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     justify-content: center; }
     @media only screen and (max-width: 50em) {
       .realtors__list {
-        grid-column-gap: 3vw;
+        grid-gap: 3vw;
         flex-direction: row; } }
     @media only screen and (max-width: 37.5em) {
       .realtors__list {
+        grid-gap: 3vh;
         flex-direction: column; } }
 
 .realtor {
@@ -263,6 +272,9 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   @media only screen and (max-width: 50em) {
     .realtor {
       grid-column-gap: 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .realtor {
+      grid-column-gap: 2.5rem; } }
   .realtor__img {
     width: 100%;
     border-radius: 50%; }
