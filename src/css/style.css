@@ -8,6 +8,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 43.75%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -17,6 +23,20 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.u-unselectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */ }
 
 .u-mb-sm {
   margin-bottom: 2rem; }
@@ -82,6 +102,10 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
+  /*   @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  } */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -133,11 +157,11 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   background-blend-mode: multiply;
   background-size: cover;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center;
-  padding: 2rem 0rem; }
+  padding: 2rem 8rem 2rem 8rem; }
   .header__brand {
     height: 3rem;
     display: flex;
@@ -168,7 +192,8 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     justify-content: space-between;
     opacity: 0.45; }
     .header__seen-on-logos img {
-      height: 2.5rem; }
+      max-height: 2.5rem;
+      max-width: 100%; }
   .header__btn {
     align-self: start;
     justify-self: start; }

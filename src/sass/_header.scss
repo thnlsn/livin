@@ -7,13 +7,15 @@
 
   display: grid;
   // Using fr in rows works here because the height of the parent is defined
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr; // At least 6rem, but if it overflows, take up however much the min-content needs
+  grid-template-columns: minmax(
+    min-content,
+    max-content
+  ); // Never more narrow than content, but at max, let the content extend unwrapped
   grid-row-gap: 1.5rem;
-
   justify-content: center; // Center the lot of grid elements
 
-  padding: 2rem 0rem;
+  padding: 2rem 8rem 2rem 8rem;
 
   &__brand {
     height: 3rem;
@@ -61,7 +63,9 @@
     opacity: 0.45;
 
     img {
-      height: 2.5rem;
+      // The whole grid width is defined by this because it is the largest grid item
+      max-height: 2.5rem;
+      max-width: 100%;
     }
   }
 

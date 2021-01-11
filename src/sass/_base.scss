@@ -16,6 +16,16 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
 
 $full-bleed-width: minmax(6rem, 1fr); // At smallest, 60px || at largest, 1fr
 
+// RESPONSIVE BREAKPOINTS
+// ----------------------- (x / 16) where x = desired breakpoint in px
+$bp-largest: 75em; // ---- 1200px
+$bp-large: 62.5em; // --- 1100px
+$bp-medium: 56.25em; // -- 900px
+$bp-small: 37.5em; // ---- 600px
+$bp-smallest: 31.25em; // ---- 500px
+$bp-phone: 25em; // ---- 400px
+
+// GLOBAL RESET
 *,
 *::before,
 *::after {
@@ -27,13 +37,23 @@ $full-bleed-width: minmax(6rem, 1fr); // At smallest, 60px || at largest, 1fr
 html {
   box-sizing: border-box;
   font-size: 62.5%; // This sets the default font-size to 10px because most broswers default to 16px, and 62.5% of 16 is 10. This makes it easier to use rem units.
+
+  // GLOBAL SPACING MEDIA QUERY
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 43.75%;
+  }
 }
 
+// DEFAULT FONT STYLES
 body {
   font-family: $font-primary;
   color: $color-grey-dark-2;
 }
 
+// GENERAL LAYOUT
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
@@ -47,9 +67,19 @@ body {
     $full-bleed-width [full-end]; // 14rme = 140px = 1140/8 (8 columns)
 }
 
+// UTILITY CLASSES
 ///////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
+
+.u-unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
 
 .u-mb-sm {
   margin-bottom: 2rem;
@@ -63,3 +93,7 @@ body {
 .u-mb-hg {
   margin-bottom: 8rem;
 }
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////

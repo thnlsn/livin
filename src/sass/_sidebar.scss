@@ -3,6 +3,11 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; // Start at row line 1 (top) and span to the bottom (-1)
 
+  /*   @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  } */
+
   // Center the burger btn
   display: flex;
   align-items: center;
