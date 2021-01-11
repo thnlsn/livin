@@ -170,7 +170,7 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     .header__seen-on-logos img {
       height: 2.5rem; }
   .header__btn {
-    align-self: center;
+    align-self: start;
     justify-self: start; }
 
 .realtors {
@@ -197,8 +197,7 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     border-radius: 50%; }
   .realtor__sales {
     color: #aaa;
-    text-transform: uppercase;
-    font-size: 0.8rem; }
+    text-transform: uppercase; }
 
 .features {
   grid-column: center-start / center-end;
