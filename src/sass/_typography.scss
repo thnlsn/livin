@@ -56,12 +56,16 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1.8rem 3rem;
+  outline: none;
   cursor: pointer;
 
-  transition: all 0.2s;
+  transition: background-color 0.2s, filter 0.1s;
   background-color: $color-primary;
 
   &:hover {
     background-color: $color-primary-dark;
+  }
+  &:active {
+    filter: brightness(0.9);
   }
 }

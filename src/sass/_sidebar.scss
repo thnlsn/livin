@@ -3,10 +3,12 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; // Start at row line 1 (top) and span to the bottom (-1)
 
-  /*   @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-large) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-  } */
+    align-items: flex-end; // Move the burger to the end
+    justify-content: center; // Move the burger to the center (vertically)
+  }
 
   // Center the burger btn
   display: flex;
@@ -27,6 +29,11 @@
     display: block;
     width: 4.5rem;
     height: 3.2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 0;
+      margin-right: 3rem;
+    }
   }
 
   &__burger {
@@ -66,6 +73,15 @@
     // Bottom bun 15px under middle
     &:after {
       top: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      &:before {
+        top: -1.3rem;
+      }
+      &:after {
+        top: 1.3rem;
+      }
     }
   }
 

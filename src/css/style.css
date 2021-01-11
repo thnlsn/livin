@@ -7,13 +7,13 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /*   @media only screen and (max-width: $bp-large) {
+    font-size: 43.75%;
+  } */ }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 62.5em) {
-    html {
-      font-size: 43.75%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -23,6 +23,10 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
 
 .u-unselectable {
   -webkit-touch-callout: none;
@@ -92,25 +96,30 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1.8rem 3rem;
+  outline: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s, filter 0.1s;
   background-color: #c69963; }
   .btn:hover {
     background-color: #b28451; }
+  .btn:active {
+    filter: brightness(0.9); }
 
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
-  /*   @media only screen and (max-width: $bp-large) {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-  } */
   display: flex;
   align-items: center;
   flex-direction: column;
   z-index: 9999;
   width: 100%; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      align-items: flex-end;
+      justify-content: center; } }
   .sidebar__checkbox {
     display: none; }
   .sidebar__btn {
@@ -119,6 +128,10 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
     display: block;
     width: 4.5rem;
     height: 3.2rem; }
+    @media only screen and (max-width: 62.5em) {
+      .sidebar__btn {
+        margin-top: 0;
+        margin-right: 3rem; } }
   .sidebar__burger {
     position: absolute;
     top: 50%;
@@ -140,6 +153,11 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
       top: -1.5rem; }
     .sidebar__burger:after {
       top: 1.5rem; }
+    @media only screen and (max-width: 62.5em) {
+      .sidebar__burger:before {
+        top: -1.3rem; }
+      .sidebar__burger:after {
+        top: 1.3rem; } }
   .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger {
     background-color: transparent; }
   .sidebar__checkbox:checked + .sidebar__btn .sidebar__burger:before,
@@ -226,7 +244,6 @@ $font-display: 'Josefin Sans', sans-serif; // A thinner more stylized font for t
 
 .features {
   grid-column: center-start / center-end;
-  grid-row: 2 / 3;
   margin: 15rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
