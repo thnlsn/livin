@@ -8,7 +8,7 @@ const Realtors = ({ realtors }) => {
       <h3 className='heading-3'>{text}</h3>
       <div className='realtors__list'>
         {staff.map((realtor, index) => (
-          <div className='realtor'>
+          <div className='realtor' key={index}>
             <img
               src={realtor.image}
               alt={`Realtor ${index}`}

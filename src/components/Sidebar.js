@@ -5,10 +5,10 @@ const Sidebar = () => {
     <div className='sidebar'>
       <input
         type='checkbox'
-        class='sidebar__checkbox'
+        className='sidebar__checkbox'
         id='sidebar-toggle'
       ></input>
-      <label for='sidebar-toggle' className='sidebar__btn'>
+      <label htmlFor='sidebar-toggle' className='sidebar__btn'>
         <span className='sidebar__burger' />
       </label>
     </div>

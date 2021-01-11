@@ -22,7 +22,7 @@ const Header = ({ header }) => {
       <div className='header__seen-on-text'>{seenOn.text}</div>
       <div className='header__seen-on-logos'>
         {seenOn.logos.map((logo, index) => (
-          <img src={logo} alt={`Seen on logo ${index}`} />
+          <img src={logo} alt={`Seen on logo ${index}`} key={index} />
         ))}
       </div>
     </header>

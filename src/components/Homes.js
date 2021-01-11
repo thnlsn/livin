@@ -9,13 +9,8 @@ const Homes = ({ homes }) => {
   return (
     <section className='homes'>
       {properties.map((home, index) => (
-        <div className='home'>
-          <img
-            src={home.image}
-            alt={`House ${index}`}
-            className='home__img'
-            key={index}
-          />
+        <div className='home' key={index}>
+          <img src={home.image} alt={`House ${index}`} className='home__img' />
           <svg className='home__like'>
             <use xlinkHref={`${sprite}${icons.like}`}></use>
           </svg>

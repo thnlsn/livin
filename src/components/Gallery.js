@@ -8,6 +8,7 @@ const Gallery = ({ gallery }) => {
           src={image}
           alt={`Gallery image ${index++}`}
           className='gallery__img'
+          key={index}
         />
       ))}
     </section>
