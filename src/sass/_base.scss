@@ -21,8 +21,8 @@ $full-bleed-width: minmax(6rem, 1fr); // At smallest, 60px || at largest, 1fr
 $bp-largest: 75em; // ---- 1200px
 $bp-large: 62.5em; // --- 1000px
 $bp-medium: 50em; // -- 800px
-
 $bp-small: 37.5em; // ---- 600px
+
 $bp-smallest: 31.25em; // ---- 500px
 $bp-phone: 25em; // ---- 400px
 
@@ -71,6 +71,23 @@ body {
   @media only screen and (max-width: $bp-large) {
     // Add new row and remove first column
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    // 8 columns with width between their min-content and 14rem mean that a maximum possible width is 1120px (14rem * 8)
+    grid-template-columns:
+      [full-start] $full-bleed-width [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end]
+      $full-bleed-width [full-end]; // 14rme = 140px = 1140/8 (8 columns)
+  }
+
+  // 800px WIDTH VIEWPORT
+  @media only screen and (max-width: $bp-medium) {
+    // Add new row and remove first column
+    grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(
+        3,
+        min-content
+      );
     // 8 columns with width between their min-content and 14rem mean that a maximum possible width is 1120px (14rem * 8)
     grid-template-columns:
       [full-start] $full-bleed-width [center-start] repeat(

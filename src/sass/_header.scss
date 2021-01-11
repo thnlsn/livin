@@ -17,6 +17,11 @@
 
   padding: 2rem 8rem 2rem 8rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+    padding: 2rem 8rem 6rem 8rem;
+  }
+
   &__brand {
     height: 3rem;
     display: flex;
