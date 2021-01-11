@@ -12,9 +12,11 @@
 
     @media only screen and (max-width: $bp-medium) {
       grid-column: 1 / -1;
+      padding: 3rem;
     }
   }
 
+  // The couple image
   &__img--1 {
     width: 100%;
 
@@ -22,23 +24,22 @@
     grid-row: 2 / 6;
 
     @media only screen and (max-width: $bp-medium) {
-      width: 100%;
-      grid-column: 1 / 4;
+      grid-column: 1 / 5;
       grid-row: 1 / -1;
     }
   }
+  // The house image
   &__img--2 {
     width: 115%; // Instead of transforming it or scaling it, this will do the same thing to make it break out of the div while keeping its top and left position in the center of the img-1
 
-    grid-column: 3 / 5;
+    grid-column: 4 / 7;
     grid-row: 4 / 6;
 
     z-index: 10; // Transforming it would have made this unneccesary because that would create a new stacking context which would have this be on top
 
     @media only screen and (max-width: $bp-medium) {
+      grid-row: 1 / -1;
       width: 100%;
-      grid-column: 3 / 5;
-      grid-row: 2 / 4;
     }
   }
 
@@ -48,6 +49,7 @@
 
     padding: 6rem 8vw; // vw helps make it more responsive
 
+    // Make the content its own row and on top of the pictures
     @media only screen and (max-width: $bp-medium) {
       grid-column: 1 / -1;
       grid-row: 5 / 6;
